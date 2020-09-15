@@ -1,0 +1,3 @@
+curl --insecure -v -k --key "/atools/aws_resources/ppkKey.pem" sftp://ubuntu@13.233.104.142/opt/Backends/Sudoku/app_with_python_only.py -T app_with_python_only.py
+curl --insecure -v -k --key "/atools/aws_resources/ppkKey.pem" sftp://ubuntu@13.233.104.142/opt/Backends/Sudoku/runConfig.json -T runConfig.json
+ssh -i "/atools/aws_resources/ppkKey.pem" ubuntu@13.233.104.142 'cd /opt/Backends/Sudoku;mkdir solutions;pm2 start runConfig.json;'
